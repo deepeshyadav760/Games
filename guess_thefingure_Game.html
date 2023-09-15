@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <style type="text/css">
+        
+        #guesnumber {
+            /* margin-top: 270px; */
+            height: 22px;
+            margin-left: 30px;
+            background-color: aquamarine;
+        }
+        #numberGame {
+            margin-left: 500px;
+            background-color: aquamarine;
+        }
+        #para {
+            margin-top: 260px;
+            margin-left: 500px;
+        }
+        body {
+            background-color: rgb(43, 150, 226);
+        }
+        
+    </style>
+    <body>
+        <p id="para">How many fingers am I holding up ?</p>
+        
+        <p><input type="text" id="numberGame"><button type="text" id="guesnumber">Guess!</button></p>
+        
+        <script type="text/javascript">
+
+            document.getElementById("guesnumber").onclick=function() {
+
+                var randomNumber = Math.random();
+                randomNumber = randomNumber * 6;
+                randomNumber = Math.floor(randomNumber);
+
+                if (document.getElementById("numberGame").value == randomNumber) {
+                    alert("Well done, You got it");
+                
+                } else {
+                    alert("Nope!, The number was " + randomNumber);
+
+                }
+
+            }
+        
+        </script>
+    </body>
+</html>
